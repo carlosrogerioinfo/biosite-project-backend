@@ -25,7 +25,7 @@ Mas, sinta-se a vontade para usar o código e implementar as outras chamadas do 
 **e-mail** : carlos@biosite.com<br/>
 **senha** : teste123
 
-**e-mail** : carlos@biosite.com<br/>
+**e-mail** : ester@biosite.com<br/>
 **senha** : teste123
 
 ## Banco de dados
