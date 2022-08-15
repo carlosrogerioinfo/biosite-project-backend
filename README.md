@@ -12,13 +12,13 @@ Mas, sinta-se a vontade para usar o código e implementar as outras chamadas do 
 
 ## As APIs podem ser testadas através dos seguintes endereços logo abaixo:
 
-**API Gateway** : <a href="http://gateway.sampleapicore.uni5.net/" target="_blank">http://gateway.sampleapicore.uni5.net/</a>
+**API Gateway** : <a href="http://gateway.yourdomain.com/" target="_blank">http://gateway.yourdomain.com/</a>
   
-**API de autenticação**: <a href="http://authentication.sampleapicore.uni5.net/" target="_blank">http://authentication.sampleapicore.uni5.net/</a>
+**API de autenticação**: <a href="http://authentication.yourdomain.com/" target="_blank">http://authentication.yourdomain.com/</a>
 
-**API de biomarcadores**: <a href="http://biomarker.sampleapicore.uni5.net/" target="_blank">http://biomarker.sampleapicore.uni5.net/</a>
+**API de biomarcadores**: <a href="http://biomarker.yourdomain.com/" target="_blank">http://biomarker.yourdomain.com/</a>
 
-**API de órgãos**: <a href="http://organ.sampleapicore.uni5.net/" target="_blank">http://organ.sampleapicore.uni5.net/</a>
+**API de órgãos**: <a href="http://organ.yourdomain.com/" target="_blank">http://organ.yourdomain.com/</a>
 
 ## Informações de login para autenticação
 
