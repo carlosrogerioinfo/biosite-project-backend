@@ -1,3 +1,14 @@
+# Dados de Acesso
+
+Para acessar, clique aqui: https://biosite-dashboard.vercel.app/login
+Dados para login:
+
+e-mail : carlos@biosite.com
+senha : teste123
+
+e-mail : ester@biosite.com
+senha : teste123
+
 # Estrutura de uma aplicação API com Gateway e CQRS
 
 O projeto **Biosite** é um exemplo de estrutura de aplicação distribuída com utilização de **API**, **Gateways** para isolamento das APIs, possui uma implementação funcional do uso do **CRQS** (Command Query Responsibility Segregation), uso de **VO** (Value Objects) e uso de **Notification Pattern** e muito mais, este projeto tem a intenção de servir de modelo para desenvolvedores iniciantes que estão aprendendo desenvolvimento de backends com comunicação entre APIs via gateway na plataforma Asp.Net Core usando linguagem C#.
