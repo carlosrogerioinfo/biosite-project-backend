@@ -58,7 +58,7 @@ namespace Biosite.Gateway.Controllers
         {
             return await Response(await _service.GetByName(name, Request.Headers["Authorization"]), _service.Notifications);
         }
-        /*
+        
         /// <summary>
         /// Insere um biomarcador (requer autenticação).
         /// </summary>
@@ -100,6 +100,6 @@ namespace Biosite.Gateway.Controllers
         {
             return await Response(await _service.Delete(command, Request.Headers["Authorization"]), _service.Notifications);
         }
-        */
+        
     }
 }
