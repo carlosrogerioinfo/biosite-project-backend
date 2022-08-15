@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<!-- Application Parameters -->
+
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<NoWarn>$(NoWarn);1591;8603</NoWarn>
+
+		<!--As linhas abaixo corrigem o problems de :HTTP Error 500.30 - ANCM In-Process Start Failure-->
+		<AspNetCoreHostingModel>OutOfProcess</AspNetCoreHostingModel>
+		<AspNetCoreModuleName>AspNetCoreModule</AspNetCoreModuleName>
+		<UserSecretsId>7a12850c-3244-4dc2-9aed-9a38d136a4bb</UserSecretsId>
+		<!--As linhas abaixo corrigem o problems de :HTTP Error 500.30 - ANCM In-Process Start Failure-->
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\building blocks\Biosite.Core\Biosite.Core.csproj" />
+		<ProjectReference Include="..\..\building blocks\Biosite.Infrastructure\Biosite.Infrastructure.csproj" />
+	</ItemGroup>
+
+</Project>
