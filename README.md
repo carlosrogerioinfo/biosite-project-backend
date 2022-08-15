@@ -4,10 +4,10 @@ Para acessar, clique aqui: https://biosite-dashboard.vercel.app/login<br/>
 
 **Dados para login**
 
-e-mail : carlos@biosite.com
+e-mail : carlos@biosite.com<br/>
 senha : teste123
 
-e-mail : ester@biosite.com
+e-mail : ester@biosite.com<br/>
 senha : teste123
 
 # Estrutura de uma aplicação API com Gateway e CQRS
