@@ -8,7 +8,9 @@ e-mail : carlos@biosite.com<br/>
 senha : teste123
 
 e-mail : ester@biosite.com<br/>
-senha : teste123
+senha : teste123<br/>
+
+**Observação: ** Exclusões só são exibidas no lado cliente, mas não efetivadas no banco de dados. Mas Inclusões e alterações são persistidas na base. Assim evita-se que apaguem dados propositalmente.
 
 # Estrutura de uma aplicação API com Gateway e CQRS
 
