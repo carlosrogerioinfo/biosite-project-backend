@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Biosite.Core.Commands;
-using Biosite.Core.Model;
 using Biosite.Domain.Commands.Request.Organ;
 using Biosite.Domain.Commands.Response;
 using Biosite.Domain.Entities;
@@ -40,12 +39,9 @@ namespace Biosite.Organs.Api.Commands.Handlers
             var commandObject = await _repository.GetByIdAsync(command.Id);
 
             if (commandObject is null)
-            {
-                var objectNotification = new Message();
-                objectNotification.AddNotification(new Notification("Órgão", "Órgão não encontrado"));
-                AddNotifications(objectNotification.Notifications);
-                return null;
-            }
+                AddNotification("Órgão", "Órgão não encontrado");
+
+            if (!IsValid()) return default;
 
             return _mapper.Map<OrganResponse>(commandObject);
         }
@@ -95,12 +91,9 @@ namespace Biosite.Organs.Api.Commands.Handlers
             var commandObject = await _repository.GetByIdAsync(command.Id);
 
             if (commandObject is null)
-            {
-                var objectNotification = new Message();
-                objectNotification.AddNotification(new Notification("Órgão", "Órgão não encontrado"));
-                AddNotifications(objectNotification.Notifications);
-                return null;
-            }
+                AddNotification("Órgão", "Órgão não encontrado");
+
+            if (!IsValid()) return default;
 
             _repository.Delete(commandObject);
             await _uow.CommitAsync();

@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using Biosite.Core.Commands.Response;
 using Biosite.Core.Library;
-using Biosite.Core.Model;
 using Biosite.Domain.Entities;
 using Biosite.Domain.Repositories;
 using Biosite.Infrastructure.Transactions;
@@ -28,21 +27,13 @@ namespace Biosite.Authentication.Api.Commands.Handlers
         {
             var commandObject = await _repository.LoginUserAsync(email, SharedFunctions.EncryptPassword(password));
 
-            if (commandObject is null)
-            {
-                var objectNotification = new Message();
-                objectNotification.AddNotification(new Notification("Login", "Usuário ou senha inválidos"));
-                AddNotifications(objectNotification.Notifications);
-                return null;
-            }
+            if (commandObject is null) 
+                AddNotification("Login", "Usuário ou senha inválidos");
 
-            if (!commandObject.Active || !commandObject.Verified)
-            {
-                var objectNotification = new Message();
-                objectNotification.AddNotification(new Notification("User", "Este e-mail não está ativo, é necessário ativar seu e-mail para logar no sistema."));
-                AddNotifications(objectNotification.Notifications);
-                return null;
-            }
+            if (!commandObject.Active || !commandObject.Verified) 
+                AddNotification("User", "Este e-mail não está ativo, é necessário ativar seu e-mail para logar no sistema.");
+ 
+            if (!IsValid()) return default;
 
             await UpdateLoginDate(commandObject);
 

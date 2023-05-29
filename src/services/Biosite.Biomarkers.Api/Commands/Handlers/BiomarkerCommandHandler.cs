@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Biosite.Core.Commands;
-using Biosite.Core.Model;
 using Biosite.Domain.Commands.Request.Biomarker;
 using Biosite.Domain.Commands.Response;
 using Biosite.Domain.Entities;
@@ -40,12 +39,9 @@ namespace Biosite.Biomarkers.Api.Commands.Handlers
             var commandObject = await _repository.GetByIdAsync(command.Id);
 
             if (commandObject is null)
-            {
-                var objectNotification = new Message();
-                objectNotification.AddNotification(new Notification("Biomarcador", "Biomarcador não encontrado"));
-                AddNotifications(objectNotification.Notifications);
-                return null;
-            }
+                AddNotification ("Biomarcador", "Biomarcador não encontrado");
+
+            if (!IsValid()) return default;
 
             return _mapper.Map<BiomarkerResponse>(commandObject);
         }
@@ -55,12 +51,9 @@ namespace Biosite.Biomarkers.Api.Commands.Handlers
             var commandObject = await _repository.GetByNameAsync(command.Name);
 
             if (commandObject is null)
-            {
-                var objectNotification = new Message();
-                objectNotification.AddNotification(new Notification("Biomarcador", "Biomarcador não encontrado"));
-                AddNotifications(objectNotification.Notifications);
-                return null;
-            }
+                AddNotification("Biomarcador", "Biomarcador não encontrado");
+
+            if (!IsValid()) return default;
 
             return _mapper.Map<BiomarkerResponse>(commandObject);
         }
@@ -104,12 +97,9 @@ namespace Biosite.Biomarkers.Api.Commands.Handlers
             var commandObject = await _repository.GetByIdAsync(command.Id);
 
             if (commandObject is null)
-            {
-                var objectNotification = new Message();
-                objectNotification.AddNotification(new Notification("Biomarcador", "Biomarcador não encontrada"));
-                AddNotifications(objectNotification.Notifications);
-                return null;
-            }
+                AddNotification("Biomarcador", "Biomarcador não encontrado");
+
+            if (!IsValid()) return default;
 
             _repository.Delete(commandObject);
             await _uow.CommitAsync();
